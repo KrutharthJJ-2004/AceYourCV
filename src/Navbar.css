@@ -1,0 +1,28 @@
+.navbar {
+  width: 100%;
+  padding: 14px 30px;
+  background: #ffffff;
+  border-bottom: 2px solid #c9a84c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-family: 'EB Garamond', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #c9a84c;
+  letter-spacing: 2px;
+}
+
+.navbar .tagline {
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  color: #aaa;
+  letter-spacing: 1px;
+}
