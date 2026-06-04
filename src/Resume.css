@@ -1,3 +1,4 @@
+/* BASE */
 .resume {
   font-family: 'EB Garamond', serif;
   padding: 40px;
@@ -5,36 +6,119 @@
   margin: auto;
   border: 1px solid #ddd;
   min-height: 100vh;
+  background: #fff;
 }
 
-.resume h1 {
+/* CLASSIC TEMPLATE */
+.resume.classic h1 {
   font-size: 32px;
   margin-bottom: 4px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: #000;
 }
 
-.resume .contact {
+.resume.classic .contact {
   font-size: 14px;
   color: #555;
   margin-bottom: 16px;
 }
 
-.resume hr {
+.resume.classic hr {
   border: 1px solid #000;
   margin: 12px 0;
 }
 
-.resume h3 {
+.resume.classic h3 {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 4px;
   color: #222;
+  margin-bottom: 4px;
 }
 
-.resume p {
+.resume.classic p {
   font-size: 14px;
   color: #333;
   line-height: 1.6;
+}
+
+/* MODERN TEMPLATE */
+.resume.modern {
+  border-left: 6px solid #c9a84c;
+  padding-left: 30px;
+}
+
+.resume.modern h1 {
+  font-size: 30px;
+  color: #c9a84c;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+.resume.modern .contact {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.resume.modern hr {
+  border: 1px solid #c9a84c;
+  margin: 12px 0;
+}
+
+.resume.modern h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #c9a84c;
+  margin-bottom: 4px;
+}
+
+.resume.modern p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* MINIMAL TEMPLATE */
+.resume.minimal {
+  border: none;
+  padding: 60px;
+}
+
+.resume.minimal h1 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 4px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.resume.minimal .contact {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.resume.minimal hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 16px 0;
+}
+
+.resume.minimal h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+
+.resume.minimal p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.8;
 }

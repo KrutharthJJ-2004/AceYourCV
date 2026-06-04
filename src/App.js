@@ -13,6 +13,7 @@ function App() {
     experience: '',
     education: '',
     skills: '',
+    template: 'classic',
   });
 
   const handleChange = (e) => {
@@ -36,6 +37,13 @@ function App() {
 
       <div className="form-panel">
         <h2>AceYourCV</h2>
+
+        <label>Choose Template</label>
+        <select name="template" onChange={handleChange}>
+          <option value="classic">Classic</option>
+          <option value="modern">Modern</option>
+          <option value="minimal">Minimal</option>
+        </select>
 
         <label>Full Name</label>
         <input name="name" placeholder="John Doe" onChange={handleChange} />
@@ -62,7 +70,7 @@ function App() {
       </div>
 
       <div style={{ width: '60%', overflowY: 'auto', padding: '20px', background: '#f9f6ee' }}>
-        <div className="resume" id="resume-preview">
+        <div className={`resume ${formData.template}`} id="resume-preview">
           <h1>{formData.name || 'Your Full Name'}</h1>
           <p className="contact">
             {formData.email || 'your@email.com'}

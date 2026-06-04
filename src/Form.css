@@ -51,3 +51,41 @@
   margin-bottom: 4px;
   display: block;
 }
+
+.form-panel select {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #e0c97a;
+  border-radius: 4px;
+  background: #fffdf5;
+  color: #333;
+  font-size: 14px;
+  font-family: 'EB Garamond', serif;
+  outline: none;
+  cursor: pointer;
+}
+
+.form-panel select:focus {
+  border-color: #c9a84c;
+  box-shadow: 0 0 0 2px rgba(201,168,76,0.15);
+}
+
+.form-panel button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #c9a84c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'EB Garamond', serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-panel button:hover {
+  background: #a8873c;
+}
