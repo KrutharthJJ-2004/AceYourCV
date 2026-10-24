@@ -1,6 +1,6 @@
 """Convenient development entry point for AceYourCV."""
 
-from backend.app import main
+from backend.server import main
 
 
 if __name__ == "__main__":
