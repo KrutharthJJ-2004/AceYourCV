@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <title>AceYourCV — Free Resume Builder</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/" aria-label="AceYourCV home">Ace<span>YourCV</span></a><div class="top-note">Make your next move count.</div></header>
+  <main>
+    <section class="template-screen" id="template-screen">
+      <div class="intro"><div class="eyebrow">Your next chapter starts here</div><h1>A resume that looks like you.</h1><p>Pick a starting point. You can edit every detail and change the look whenever you like.</p></div>
+      <div class="template-grid">
+        <button class="template-card" type="button" data-template="modern"><div class="thumb thumb-modern"><b></b><i></i><i></i><i></i><span></span></div><span class="template-name">Modern</span><span class="template-desc">Clean, confident, and easy to scan</span></button>
+        <button class="template-card" type="button" data-template="classic"><div class="thumb thumb-classic"><b></b><i></i><i></i><i></i><span></span></div><span class="template-name">Classic</span><span class="template-desc">A timeless layout for any industry</span></button>
+        <button class="template-card" type="button" data-template="compact"><div class="thumb thumb-compact"><b></b><i></i><i></i><i></i><span></span></div><span class="template-name">Compact</span><span class="template-desc">Make room for a longer career story</span></button>
+      </div>
+      <p class="free-note">All templates are free. Your resume details stay on this device while you work.</p>
+    </section>
+
+    <section class="editor-screen" id="editor-screen" hidden>
+      <div class="editor-toolbar"><button class="back-button" id="back-to-templates" type="button">← Templates</button><div class="doc-title"><span class="status-dot"></span><span>AceYourCV</span><small>Private to this browser</small></div><button class="download-button" id="download" type="button">Download PDF <span>↓</span></button></div>
+      <div class="design-workspace">
+        <aside class="sidebar">
+          <div class="sidebar-tabs"><button class="tab active" type="button" data-tab="content">Content</button><button class="tab" type="button" data-tab="design">Design</button></div>
+          <div class="tab-panel active" id="content-panel">
+            <div class="side-heading"><h2>Your content</h2><p>Changes show up on your page as you type.</p></div>
+            <div class="editor-form">
+              <div class="section-head"><h3>Basics</h3></div>
+              <div class="fields">
+                <div class="field"><label for="name">Full name</label><input id="name" placeholder="e.g. Maya Sharma" autocomplete="name"></div>
+                <div class="field"><label for="role">Target role</label><input id="role" placeholder="e.g. Product Designer"></div>
+                <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="maya@email.com" autocomplete="email"></div>
+                <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel"></div>
+                <div class="field full"><label for="location">Location or portfolio</label><input id="location" placeholder="Bengaluru, India · mayasharma.design"></div>
+                <div class="field full"><label for="summary">Professional summary</label><textarea id="summary" placeholder="A short introduction about your experience and strengths."></textarea></div>
+              </div>
+              <div class="divider"></div>
+              <div class="section-head"><h3>Experience</h3><span class="hint">Most recent first</span></div>
+              <div id="experience-list"></div><button class="add" id="add-experience" type="button">＋ Add experience</button>
+              <div class="divider"></div>
+              <div class="section-head"><h3>Education</h3><span class="hint">Optional</span></div>
+              <div id="education-list"></div><button class="add" id="add-education" type="button">＋ Add education</button>
+              <div class="divider"></div>
+              <div class="section-head"><h3>Languages</h3><span class="hint">Optional</span></div>
+              <div id="languages-list"></div><button class="add" id="add-language" type="button">＋ Add language</button>
+              <div class="divider"></div>
+              <div class="section-head"><h3>Certifications</h3><span class="hint">Optional</span></div>
+              <div id="certifications-list"></div><button class="add" id="add-certification" type="button">＋ Add certification</button>
+              <div class="divider"></div>
+              <div class="fields"><div class="field full"><label for="skills">Skills</label><input id="skills" placeholder="Research, Figma, prototyping"></div></div>
+              <button class="clear-button" id="clear" type="button">Clear resume details</button>
+            </div>
+          </div>
+          <div class="tab-panel" id="design-panel">
+            <div class="side-heading"><h2>Make it yours</h2><p>Adjust the style. Your content stays the same.</p></div>
+            <div class="design-control"><h3>Template</h3><div class="template-switcher"><button type="button" data-template="modern">Modern</button><button type="button" data-template="classic">Classic</button><button type="button" data-template="compact">Compact</button></div></div>
+            <div class="design-control"><h3>Accent color</h3><div class="swatches"><button class="swatch selected" data-color="#24745f" style="--swatch:#24745f" aria-label="Green"></button><button class="swatch" data-color="#4263a0" style="--swatch:#4263a0" aria-label="Blue"></button><button class="swatch" data-color="#9a553c" style="--swatch:#9a553c" aria-label="Terracotta"></button><button class="swatch" data-color="#674b86" style="--swatch:#674b86" aria-label="Purple"></button><button class="swatch" data-color="#263b4a" style="--swatch:#263b4a" aria-label="Navy"></button></div></div>
+            <div class="design-control"><h3>Typography</h3><select id="font-choice" aria-label="Choose resume font"><option value="modern">Modern sans</option><option value="classic">Classic serif</option></select></div>
+            <div class="design-control"><h3>Page spacing</h3><div class="segmented"><button class="selected" type="button" data-density="comfortable">Comfortable</button><button type="button" data-density="compact">Compact</button></div></div>
+            <p class="design-tip">Tip: keep your design simple so the important details are easy to find.</p>
+          </div>
+        </aside>
+        <section class="canvas-area" aria-label="Resume design canvas">
+          <div class="canvas-top"><div><strong>Page 1</strong><span> · </span><span id="zoom-label">Fit</span></div><div class="canvas-tools"><button type="button" id="zoom-out" aria-label="Zoom out">−</button><button type="button" id="zoom-in" aria-label="Zoom in">＋</button><button type="button" id="fit-page">Fit</button></div></div>
+          <div class="page-stage"><article class="paper template-modern" id="paper" aria-label="Resume preview">
+            <header class="resume-header"><h1 class="resume-name" id="out-name">Your Name</h1><p class="resume-role" id="out-role">Your Target Role</p><div class="contact" id="out-contact"></div></header>
+            <section class="resume-section"><h2>Profile</h2><p id="out-summary" class="empty">Your professional summary will appear here.</p></section>
+            <section class="resume-section"><h2>Experience</h2><div id="out-experience"><p class="empty">Add your recent roles and accomplishments.</p></div></section>
+            <section class="resume-section"><h2>Education</h2><div id="out-education"><p class="empty">Add your education if you’d like.</p></div></section>
+            <section class="resume-section" id="languages-section"><h2>Languages</h2><div id="out-languages"><p class="empty">Add languages you speak.</p></div></section>
+            <section class="resume-section" id="certifications-section"><h2>Certifications</h2><div id="out-certifications"><p class="empty">Add relevant certifications.</p></div></section>
+            <section class="resume-section"><h2>Skills</h2><p id="out-skills" class="empty">Your skills will appear here.</p></section>
+          </article></div>
+          <div class="canvas-footer"><span>Changes are kept in your browser</span><span>Free to use</span></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
